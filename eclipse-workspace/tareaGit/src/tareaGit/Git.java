@@ -1,5 +1,7 @@
 package tareaGit;
 
+//Erick Rodríguez Banda, Moises Baltazar Sogbi, Maria Fernanda Santos Domínguez 
+
 public class Git {
 	private String Nombre;
 	private int Altura;
