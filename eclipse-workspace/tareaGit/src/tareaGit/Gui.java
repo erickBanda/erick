@@ -97,7 +97,16 @@ public class Gui extends JFrame {
 		btnNewButton.setBounds(120, 178, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnreaCuadrado = new JButton("Área cuadrado");
+		JButton btnreaCuadrado = new JButton("Área triangulo");
+		btnreaCuadrado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int base = Integer.parseInt(txtBase.getText());
+				int altura = Integer.parseInt(txtAaltura.getText());
+				int calculo = enlace.calculo ("triangulo", altura, base,0);
+				String resultadoCalculo = String.valueOf(calculo);
+				txtResultado.setText(resultadoCalculo);
+			}
+		});
 		btnreaCuadrado.setBounds(109, 207, 103, 23);
 		contentPane.add(btnreaCuadrado);
 		
@@ -111,7 +120,7 @@ public class Gui extends JFrame {
 				txtResultado.setText(resultado);
 			}
 		});
-		btnreaTringulo.setBounds(109, 241, 103, 23);
+		btnreaTringulo.setBounds(75, 241, 196, 23);
 		contentPane.add(btnreaTringulo);
 		
 		

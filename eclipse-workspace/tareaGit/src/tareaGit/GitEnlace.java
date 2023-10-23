@@ -19,7 +19,8 @@ public class GitEnlace {
             case "circulo":
                 area = (int) (radio * radio * Math.PI);
                 return area;
-            case "triangulo":                
+            case "triangulo":  
+            	area = (int)(base*altura/2);
             case "cuadrado":     
             	perimetro = (int) (base * 4);
             	return perimetro;
