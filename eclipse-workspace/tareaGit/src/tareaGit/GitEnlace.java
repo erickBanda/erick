@@ -23,6 +23,7 @@ public class GitEnlace {
             case "cuadrado":     
             	perimetro = (int) (base * 4);
             	return perimetro;
+            	
             default:
                 return 0; 
         }
