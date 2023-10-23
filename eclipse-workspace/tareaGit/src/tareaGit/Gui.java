@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -99,9 +101,19 @@ public class Gui extends JFrame {
 		btnreaCuadrado.setBounds(109, 207, 103, 23);
 		contentPane.add(btnreaCuadrado);
 		
-		JButton btnreaTringulo = new JButton("Área triángulo");
+		JButton btnreaTringulo = new JButton("Perimetro del cuadrado");
+		btnreaTringulo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(btnreaTringulo, "Para el perimetro solo es necesario escribir el valor de la base");
+				int base = Integer.parseInt(txtBase.getText());
+				int calculo = enlace.calculo("cuadrado", base, base, base);
+				String resultado = String.valueOf(calculo);
+				txtResultado.setText(resultado);
+			}
+		});
 		btnreaTringulo.setBounds(109, 241, 103, 23);
 		contentPane.add(btnreaTringulo);
+		
 		
 		JLabel lblRadio = new JLabel("Radio");
 		lblRadio.setFont(new Font("Tahoma", Font.PLAIN, 15));

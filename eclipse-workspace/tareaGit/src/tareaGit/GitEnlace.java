@@ -13,13 +13,16 @@ public class GitEnlace {
 
     public int calculo(String nombre, int radio, int base, int altura) {
         int area; 
+        int perimetro;
 
         switch (nombre) {
             case "circulo":
                 area = (int) (radio * radio * Math.PI);
                 return area;
             case "triangulo":                
-            case "cuadrado":             
+            case "cuadrado":     
+            	perimetro = (int) (base * 4);
+            	return perimetro;
             default:
                 return 0; 
         }
